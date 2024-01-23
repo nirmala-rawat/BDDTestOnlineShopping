@@ -137,7 +137,6 @@
 
                             <skippedFails>true</skippedFails>
 
-
                         </configuration>
                     </execution>
                 </executions>

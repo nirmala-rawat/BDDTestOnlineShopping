@@ -15,18 +15,18 @@ public class LoginSteps {
         this.webDriver = Hooks.webDriver;
     }
 
+    @Given("User already on login page")
+    public void verifyLoginPage() {
+        LoginPage loginPage = new LoginPage(webDriver);
+        Assert.assertTrue(loginPage.verifyLoginPage());
+    }
+    
     @When("User input {string} as userName and input {string} as password")
     public void inputCredential(String userName, String password) {
         LoginPage loginPage = new LoginPage(webDriver);
         loginPage.setUserName(userName);
         loginPage.setPassword(password);
         loginPage.clickLogin();
-    }
-
-    @Given("User already on login page")
-    public void verifyLoginPage() {
-        LoginPage loginPage = new LoginPage(webDriver);
-        Assert.assertTrue(loginPage.verifyLoginPage());
     }
 
     @Then("User already on product page")

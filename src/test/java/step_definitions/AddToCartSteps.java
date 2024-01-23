@@ -25,7 +25,5 @@ public class AddToCartSteps {
         AddToCartPage addToCartPage = new AddToCartPage(webDriver);
         addToCartPage.clickShoppingPage();
         addToCartPage.clickBtnCheckOut();
-    
-        
     }
 }
